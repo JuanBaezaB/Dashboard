@@ -3,7 +3,7 @@
     <aside id="sidebar" class="fixed inset-0  lg:overflow-y-visible ">
         <!-- Sidebar header -->
         <header
-            class="sticky top-0 transition-colors duration-500 bg-white dark:bg-gray-800 border-slate-200 lg:border-slate-900/10 dark:border-slate-50/[0.06] border-b border-r">
+            class="sticky top-0 transition-colors duration-500 bg-white dark:bg-gray-800 border-slate-200 lg:border-slate-900/10 dark:border-slate-50/[0.06] border-r">
             <div class="px-4 sm:px-3 lg:px-3 ">
                 <div class="flex items-center justify-between h-16 -mb-px">
                     <div class="flex ">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="flex items-center">
                         <button @click="sidebarClose"
-                            class="inline-flex items-center justify-center w-8 h-8 mr-2 text-slate-500 transition-colors duration-150  bg-slate-100 hover:bg-slate-200 rounded-full focus:shadow-outline "
+                            class="inline-flex items-center justify-center w-8 h-8 mr-2 text-slate-500 transition-colors duration-150   hover:bg-slate-200 rounded-full focus:shadow-outline "
                             data-toggle="layout" data-action="sidebar_close" id="sidebar_close">
                             <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -50,25 +50,51 @@
             </div>
         </header>
         <!-- Sidebar content -->
-        <div class="overflow-y-auto h-full bg-white scrolling-touch dark:bg-gray-800 transition-colors duration-500">
-            <nav id="nav" class="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 ">
-                <ul>
-                    <li class="mt-12 lg:mt-8">
-                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
-                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/installation">Installation</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/editor-setup">Editor Setup</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/using-with-preprocessors">Using with Preprocessors</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/optimizing-for-production">Optimizing for Production</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/browser-support">Browser Support</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/upgrade-guide">Upgrade Guide</a></li>
-                        </ul>
+        <div id="nav" class="overflow-y-auto h-full bg-white scrolling-touch dark:bg-gray-800 transition-colors duration-500 border-slate-200 lg:border-slate-900/10 dark:border-slate-50/[0.06] border-b border-r">
+            <nav id="nav" class="mx-10 my-10 sm:mx-36 lg:mx-5 lg:my-5 font-normal text-base lg:text-sm">
+                <ul class="">
+                    <li>
+                        <a
+                            class="group flex items-center p-2 rounded-lg lg:text-sm lg:leading-6 font-semibold text-sky-500 dark:text-sky-400 hover:bg-gray-100 dark:hover:bg-gray-900 ">
+                            <div
+                                class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 dark:bg-sky-500 dark:highlight-white/10">
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.5 7c1.093 0 2.117.27 3 .743V17a6.345 6.345 0 0 0-3-.743c-1.093 0-2.617.27-3.5.743V7.743C5.883 7.27 7.407 7 8.5 7Z"
+                                        class="fill-sky-200 group-hover:fill-sky-500 dark:fill-sky-300 dark:group-hover:fill-sky-300">
+                                    </path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.5 7c1.093 0 2.617.27 3.5.743V17c-.883-.473-2.407-.743-3.5-.743s-2.117.27-3 .743V7.743a6.344 6.344 0 0 1 3-.743Z"
+                                        class="fill-sky-400 group-hover:fill-sky-500 dark:fill-sky-200 dark:group-hover:fill-sky-200">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>
+                                Documentation
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            class="group flex items-center p-2 rounded-lg lg:text-sm text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:bg-gray-900">
+                            <div
+                                class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-indigo-200 dark:group-hover:bg-indigo-500 dark:bg-slate-800 dark:highlight-white/5">
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                                    <path d="m6 9 6-3 6 3v6l-6 3-6-3V9Z"
+                                        class="fill-indigo-100 group-hover:fill-indigo-200 dark:fill-slate-400"></path>
+                                    <path d="m6 9 6 3v7l-6-3V9Z"
+                                        class="fill-indigo-300 group-hover:fill-indigo-400 dark:group-hover:fill-indigo-300 dark:fill-slate-500">
+                                    </path>
+                                    <path d="m18 9-6 3v7l6-3V9Z"
+                                        class="fill-indigo-400 group-hover:fill-indigo-500 dark:group-hover:fill-indigo-400 dark:fill-slate-600">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>
+                                Components
+                            </span>
+                        </a>
                     </li>
                     <li class="mt-12 lg:mt-8">
                         <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
@@ -104,40 +130,7 @@
                                     href="/docs/upgrade-guide">Upgrade Guide</a></li>
                         </ul>
                     </li>
-                    <li class="mt-12 lg:mt-8">
-                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
-                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/installation">Installation</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/editor-setup">Editor Setup</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/using-with-preprocessors">Using with Preprocessors</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/optimizing-for-production">Optimizing for Production</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/browser-support">Browser Support</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/upgrade-guide">Upgrade Guide</a></li>
-                        </ul>
-                    </li>
-                    <li class="mt-12 lg:mt-8">
-                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
-                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/installation">Installation</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/editor-setup">Editor Setup</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/using-with-preprocessors">Using with Preprocessors</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/optimizing-for-production">Optimizing for Production</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/browser-support">Browser Support</a></li>
-                            <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                    href="/docs/upgrade-guide">Upgrade Guide</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
             </nav>
         </div>

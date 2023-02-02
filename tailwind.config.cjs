@@ -9,8 +9,13 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Poppins']
-      }
+      },
+      screens: {
+        'lg': '992px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
