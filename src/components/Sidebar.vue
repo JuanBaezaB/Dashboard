@@ -51,11 +51,11 @@
         </header>
         <!-- Sidebar content -->
         <div id="nav" class="overflow-y-auto h-full bg-white scrolling-touch dark:bg-gray-800 transition-colors duration-500 border-slate-200 lg:border-slate-900/10 dark:border-slate-50/[0.06] border-b border-r">
-            <nav id="nav" class="mx-10 my-10 sm:mx-36 lg:mx-5 lg:my-5 font-normal text-base lg:text-sm">
+            <nav id="nav" class="mx-10 my-10 md:mx-5 md:my-5 font-normal text-base md:text-sm">
                 <ul class="">
                     <li>
                         <a
-                            class="group flex items-center p-2 rounded-lg lg:text-sm lg:leading-6 font-semibold text-sky-500 dark:text-sky-400 hover:bg-gray-100 dark:hover:bg-gray-900 ">
+                            class="group flex items-center p-2 rounded-lg md:text-sm lg:leading-6 font-semibold text-sky-500 dark:text-sky-400 hover:bg-gray-100 dark:hover:bg-gray-900 ">
                             <div
                                 class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 dark:bg-sky-500 dark:highlight-white/10">
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
@@ -97,8 +97,8 @@
                         </a>
                     </li>
                     <li class="mt-12 lg:mt-8">
-                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
-                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
+                        <h5 class="mb-8 md:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
+                        <ul class="space-y-6 md:space-y-2 border-l border-slate-100 dark:border-slate-700">
                             <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                                     href="/docs/installation">Installation</a></li>
                             <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
@@ -114,8 +114,8 @@
                         </ul>
                     </li>
                     <li class="mt-12 lg:mt-8">
-                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
-                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
+                        <h5 class="mb-8 md:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
+                        <ul class="space-y-6 md:space-y-2 border-l border-slate-100 dark:border-slate-700">
                             <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                                     href="/docs/installation">Installation</a></li>
                             <li><a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
@@ -158,8 +158,15 @@ export default {
     },
     methods: {
         sidebarClose() {
-            this.pageContent.remove('sidebar-o-xs')
+            let withPage = window.innerWidth;
+            if (withPage < 768) {
+                this.pageContent.remove('sidebar-o-xs')
+            }else if (withPage > 767 && withPage < 1024) {
+                this.pageContent.remove('sidebar-o-md')
+            }
+           
             console.log(this.pageContent);
+
         },
         resizeHandler(e) {
             clearTimeout(this.lResize);
