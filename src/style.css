@@ -120,3 +120,15 @@
 }
 
 /* sidebar  */
+
+
+
+
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.2, .61, .42, .97);
+    transition-duration: .45s;
+}
+
+

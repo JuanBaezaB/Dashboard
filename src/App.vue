@@ -10,12 +10,12 @@ import cosa from './components/full_width_with_sidebar.vue';
 
 <template>
   
-  <div id="page-container" class="sidebar-o side-trans-enabled min-h-full">
+  <div id="page-container" class="sidebar-o side-trans-enabled min-h-full transition-all duration-200 ease-in-out">
     <div id="sidenav-overlay"></div>
     <Sidebar />
-    <div class="flex flex-col">
+    <div class="flex flex-col ">
       <Header />
-      <main id="main-panel">
+      <main id="main-panel" >
         <WeatherWidget />
       </main>
     </div>
