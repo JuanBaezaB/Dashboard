@@ -5,7 +5,7 @@ import DarkModeToggle from './DarkModeToggle.vue'
 <template>
     <!-- Content Header -->
     <header id="page-header"
-        class="top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-gray-800 ">
+        class="sticky top-0  w-full flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 dark:bg-gray-800 ">
         <div class="px-4 sm:px-6 lg:px-16">
             <div class="flex items-center justify-between h-16 -mb-px">
 
@@ -22,16 +22,13 @@ import DarkModeToggle from './DarkModeToggle.vue'
                                 d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"></path>
                         </svg>
                     </button>
-
                 </div>
+                
                 <div class="flex items-center">
-
-
 
                     <div class="relative inline-flex ml-3">
                         <DarkModeToggle />
                     </div>
-
 
                     <hr class="w-px h-6 bg-slate-200 mx-3">
 
@@ -50,9 +47,7 @@ import DarkModeToggle from './DarkModeToggle.vue'
                                 </svg>
                             </div>
                         </button>
-
                     </div>
-
 
                 </div>
             </div>
