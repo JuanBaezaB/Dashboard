@@ -178,7 +178,6 @@ export default {
         sidebarcloseMd() {
             var mainPanelDiv = document.querySelector("#sidenav-overlay");
             var navbar = document.querySelector("#page-container");
-            console.log(mainPanelDiv);
             mainPanelDiv.addEventListener('click', function (event) {
                 navbar.classList.remove('sidebar-o-md');
             });
