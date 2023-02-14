@@ -6,7 +6,7 @@ import axios from 'axios'
 
     <Transition>
         <div v-if="show"
-            class="grid grid-rows bg-white p-6 lg:px-16 bg-opacity-80 rounded-3xl m-5 ring-4 ring-white ring-opacity-40 gap-3">
+            class="grid grid-rows bg-white p-6 lg:px-8 2xl:px-16 bg-opacity-80 rounded-3xl m-5 ring-4 ring-white ring-opacity-40 gap-3">
             <div v-for="item in info" class="flex justify-between items-center">
                 <span class="text-md text-gray-700">{{ item.dt }}</span>
 

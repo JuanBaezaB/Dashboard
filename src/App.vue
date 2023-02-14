@@ -4,8 +4,6 @@ import DarkModeToggle from './components/DarkModeToggle.vue'
 import Sidebar from './components/Sidebar.vue'
 import Header from './components/Header.vue';
 import WeatherWidget from './components/Weather/WeatherWidget.vue';
-
-import cosa from './components/full_width_with_sidebar.vue';
 </script>
 
 <template>
@@ -16,14 +14,14 @@ import cosa from './components/full_width_with_sidebar.vue';
     <div class="flex flex-col ">
       <Header />
       <main id="main-panel" >
-        <WeatherWidget />
+        <WeatherWidget/>
       </main>
     </div>
    
 
 
   </div>
-  <!-- <cosa /> -->
+
 
 </template>
 

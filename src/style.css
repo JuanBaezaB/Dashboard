@@ -41,20 +41,25 @@
         transform: translateX(0) translateY(0) translateZ(0);
     }
 
+    /* Overlay sidebar on MD */
     #sidenav-overlay {
         position: fixed;
         top: 0;
+        bottom: 0;
         left: 0;
         right: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.4);
+        transition: opacity 1s;
+        visibility: hidden;
+        opacity: 0;
         z-index: 997;
-        display: none;
     }
-
+    .dark #sidenav-overlay{
+        background: rgba(0, 0, 0, 0.3);
+    }
     .sidebar-o-md #sidenav-overlay {
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
 }
@@ -124,11 +129,9 @@
 
 
 
-
+/* Transition main and header */
 .transition-all {
     transition-property: all;
     transition-timing-function: cubic-bezier(.2, .61, .42, .97);
     transition-duration: .45s;
 }
-
-

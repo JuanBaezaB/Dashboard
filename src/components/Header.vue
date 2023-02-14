@@ -5,13 +5,13 @@ import DarkModeToggle from './DarkModeToggle.vue'
 <template>
     <!-- Content Header -->
     <header id="page-header"
-        class="sticky top-0  w-full flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 dark:bg-gray-800 ">
+        class="sticky top-0  w-full flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 dark:bg-gray-800 shadow-sm dark:shadow-none">
         <div class="px-4 sm:px-6 lg:px-16">
             <div class="flex items-center justify-between h-16 -mb-px">
 
                 <div class="flex">
                     <button @click="SidebarToggle"
-                        class="text-slate-500 dark:hover:text-white  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2 inline-flex items-center dark:text-gray-400   dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        class="text-slate-500 dark:hover:text-white  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-1 inline-flex items-center dark:text-gray-400   dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="sidebar" id="sidebar_toggle" aria-expanded="false">
                         <span class="sr-only">
                             Open sidebar
@@ -23,7 +23,7 @@ import DarkModeToggle from './DarkModeToggle.vue'
                         </svg>
                     </button>
                 </div>
-                
+
                 <div class="flex items-center">
 
                     <div class="relative inline-flex ml-3">
@@ -74,26 +74,26 @@ export default {
             let withPage = window.innerWidth;
             if (withPage > 1023) {
                 this.pageContent.toggle('sidebar-o')
-                if (this.pageContent.contains('sidebar-o-sm')){
+                if (this.pageContent.contains('sidebar-o-md')) {
                     this.pageContent.remove('sidebar-o-md')
                 }
-                if (this.pageContent.contains('sidebar-o-xs')){
+                if (this.pageContent.contains('sidebar-o-xs')) {
                     this.pageContent.remove('sidebar-o-xs')
                 }
-                
+
 
             } else if (withPage > 767 && withPage < 1024) {
                 this.pageContent.toggle('sidebar-o-md')
-                if (this.pageContent.contains('sidebar-o-xs')){
+                if (this.pageContent.contains('sidebar-o-xs')) {
                     this.pageContent.remove('sidebar-o-xs')
                 }
                 console.log(withPage)
-                
-            }else if (withPage < 768) {
+
+            } else if (withPage < 768) {
                 this.pageContent.toggle('sidebar-o-xs')
             }
 
-           
+
         }
     }
 }
