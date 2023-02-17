@@ -29,13 +29,6 @@ const teams = [
     { name: 'Customer Success', href: '#', bgColorClass: 'bg-yellow-500' },
     { name: 'Engineering', href: '#', bgColorClass: 'bg-indigo-500' },
     { name: 'Human Resources', href: '#', bgColorClass: 'bg-green-500' },
-    { name: 'Customer Success', href: '#', bgColorClass: 'bg-yellow-500' },
-    { name: 'Engineering', href: '#', bgColorClass: 'bg-indigo-500' },
-    { name: 'Human Resources', href: '#', bgColorClass: 'bg-green-500' },
-    { name: 'Customer Success', href: '#', bgColorClass: 'bg-yellow-500' },
-    { name: 'Engineering', href: '#', bgColorClass: 'bg-indigo-500' },
-    { name: 'Human Resources', href: '#', bgColorClass: 'bg-green-500' },
-    { name: 'Customer Success1', href: '#', bgColorClass: 'bg-yellow-500' },
 ]
 </script>
 <template>
@@ -92,7 +85,7 @@ const teams = [
                 <nav class="px-2">
                     <div class="space-y-1">
                         <a v-for="item in navigation" :key="item.name" :href="item.href"
-                            :class="[item.current ? 'dark:bg-gray-900 bg-sky-100  dark:text-gray-100 text-gray-900' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50', 'group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md']"
+                            :class="[item.current ? 'dark:bg-gray-900 bg-gray-100 dark:text-gray-100 text-gray-900' : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-900', 'group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md']"
                             :aria-current="item.current ? 'page' : undefined">
                             <component :is="item.icon"
                                 :class="[item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-3 flex-shrink-0 h-6 w-6']"
