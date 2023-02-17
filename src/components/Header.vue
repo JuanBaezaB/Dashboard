@@ -5,7 +5,7 @@ import DarkModeToggle from './DarkModeToggle.vue'
 <template>
     <!-- Content Header -->
     <header id="page-header"
-        class="sticky top-0  w-full flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 dark:bg-gray-800 shadow-sm dark:shadow-none">
+        class="sticky top-0  w-full flex-none transition-colors duration-500 lg:z-50 lg:border-b border-borders-default dark:border-borders-default-dark/[0.06]  bg-base-light dark:bg-base-dark shadow-sm dark:shadow-none">
         <div class="px-4 sm:px-6 lg:px-16">
             <div class="flex items-center justify-between h-16 -mb-px">
 

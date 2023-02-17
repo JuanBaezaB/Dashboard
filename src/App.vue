@@ -14,7 +14,7 @@ import WeatherWidget from './components/Weather/WeatherWidget.vue';
     <div class="flex flex-col ">
       <Header />
       <main id="main-panel" >
-        <WeatherWidget/>
+        <!-- <WeatherWidget/> -->
       </main>
     </div>
    
